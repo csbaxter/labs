@@ -149,7 +149,7 @@ Modify `mario.c` at right such that it no longer simply prints the user's input 
 
 {% spoiler "Hints" %}
 
-* Keep in mind that a @ is just a character like any other, so you can print it with `printf`.
+* Keep in mind that an @ is just a character like any other, so you can print it with `printf`.
 * Just as Scratch has a [Repeat](https://docs.google.com/presentation/d/17wRd8ksO6QkUq906SUgm17AqcI-Jan42jkY-EmufxnE/edit?usp=sharing) block, so does C have a [`for`](https://docs.google.com/presentation/d/191XW0DHWlW6WmAhYuFUYnZKUlDx0N4u4Fp81AeW-uNs/edit?usp=sharing) loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many @ symbols?
 * You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print!
 
