@@ -6,7 +6,7 @@ Toward the end of World 1-1 in Nintendo's Super Mario Brothers, Mario must ascen
 
 ![screenshot of Mario jumping up a right-aligned pyramid](pyramid.png)
 
-Let's recreate that pyramid in C, albeit in text, using hashes (`@`) for bricks, a la the below. Each hash is a bit taller than it is wide, so the pyramid itself is also be taller than it is wide.
+Let's recreate that pyramid in C, albeit in text, using at symbols (`@`) for bricks, a la the below. Each @ is a bit taller than it is wide, so the pyramid itself is also be taller than it is wide.
 
 ```
        @
@@ -92,7 +92,7 @@ There's more than one way to do this, so here's just one!
 1. Prompt user for height
 1. If height is less than 1 or greater than 14 (or not an integer at all), go back one step
 1. Iterate from 1 through height:
-    1. On iteration *i*, print *i* hashes and then a newline
+    1. On iteration *i*, print *i* @'s and then a newline
 
 It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste ours into your own!
 
