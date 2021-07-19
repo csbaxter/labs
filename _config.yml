@@ -1,1 +1,8 @@
-theme: jekyll-theme-minimal
+deploy:
+  - type: git
+    repo: https://github.com/name/name.github.io.git
+    branch: master
+    ignore_hidden: false
+
+include:
+  - .nojekyll
