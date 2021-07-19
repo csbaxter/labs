@@ -6,17 +6,17 @@ Toward the end of World 1-1 in Nintendo's Super Mario Brothers, Mario must ascen
 
 ![screenshot of Mario jumping up a right-aligned pyramid](pyramid.png)
 
-Let's recreate that pyramid in C, albeit in text, using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide, so the pyramid itself is also be taller than it is wide.
+Let's recreate that pyramid in C, albeit in text, using hashes (`@`) for bricks, a la the below. Each hash is a bit taller than it is wide, so the pyramid itself is also be taller than it is wide.
 
 ```
-       #
-      ##
-     ###
-    ####
-   #####
-  ######
- #######
-########
+       @
+      @@
+     @@@
+    @@@@
+   @@@@@
+  @@@@@@
+ @@@@@@@
+@@@@@@@@
 ```
 
 The program we'll write will be called `mario`. And let's allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between, say, 1 and 8, inclusive.
@@ -26,14 +26,14 @@ Here's how the program might work if the user inputs `8` when prompted:
 ```
 $ ./mario
 Height: 8
-       #
-      ##
-     ###
-    ####
-   #####
-  ######
- #######
-########
+       @
+      @@
+     @@@
+    @@@@
+   @@@@@
+  @@@@@@
+ @@@@@@@
+@@@@@@@@
 ```
 
 Here's how the program might work if the user inputs `4` when prompted:
@@ -41,10 +41,10 @@ Here's how the program might work if the user inputs `4` when prompted:
 ```
 $ ./mario
 Height: 4
-   #
-  ##
- ###
-####
+   @
+  @@
+ @@@
+@@@@
 ```
 
 Here's how the program might work if the user inputs `2` when prompted:
@@ -52,8 +52,8 @@ Here's how the program might work if the user inputs `2` when prompted:
 ```
 $ ./mario
 Height: 2
- #
-##
+ @
+@@
 ```
 
 And here's how the program might work if the user inputs `1` when prompted:
@@ -61,7 +61,7 @@ And here's how the program might work if the user inputs `1` when prompted:
 ```
 $ ./mario
 Height: 1
-#
+@
 ```
 
 If the user, when prompted, doesn't input a positive integer between 1 and 8, inclusive, the program should re-prompt the user until they cooperate:
@@ -73,10 +73,10 @@ Height: 0
 Height: 42
 Height: 50
 Height: 4
-   #
-  ##
- ###
-####
+   @
+  @@
+ @@@
+@@@@
 ```
 
 {% spoiler "Try It" %}
@@ -149,14 +149,14 @@ Now that your program is (hopefully!) accepting input as prescribed, it's time f
 It turns out it's a bit easier to build a left-aligned pyramid than right-, a la the below.
 
 ```
-#
-##
-###
-####
-#####
-######
-#######
-########
+@
+@@
+@@@
+@@@@
+@@@@@
+@@@@@@
+@@@@@@@
+@@@@@@@@
 ```
 
 So let's build a left-aligned pyramid first and then, once that's working, right-align it instead!
@@ -174,7 +174,7 @@ Modify `mario.c` at right such that it no longer simply prints the user's input 
     {
         for (int j = 0; j < n; j++)
         {
-            printf("#");
+            printf("@");
         }
         printf("\n");
     }
@@ -189,14 +189,14 @@ Modify `mario.c` at right such that it no longer simply prints the user's input 
 Let's now right-align that pyramid by pushing its hashes to the right by prefixing them with dots (i.e., periods), a la the below.
 
 ```
-.......#
-......##
-.....###
-....####
-...#####
-..######
-.#######
-########
+.......@
+......@@
+.....@@@
+....@@@@
+...@@@@@
+..@@@@@@
+.@@@@@@@
+@@@@@@@@
 ```
 
 Modify `mario.c` in such a way that it does exactly that!
