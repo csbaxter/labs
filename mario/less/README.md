@@ -19,7 +19,7 @@ Let's recreate that pyramid in C, albeit in text, using hashes (`@`) for bricks,
 @@@@@@@@
 ```
 
-The program we'll write will be called `mario`. And let's allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between, say, 1 and 8, inclusive.
+The program we'll write will be called `mario`. And let's allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between, say, 1 and 14, inclusive.
 
 Here's how the program might work if the user inputs `8` when prompted:
 
@@ -78,18 +78,6 @@ Height: 4
  @@@
 @@@@
 ```
-
-{% spoiler "Try It" %}
-
-To try out the staff's implementation of this problem, execute
-
-```
-./mario
-```
-
-within [this sandbox](http://bit.ly/2VAClIi).
-
-{% endspoiler %}
 
 How to begin? Let's approach this problem one step at a time.
 
