@@ -64,7 +64,7 @@ Height: 1
 @
 ```
 
-If the user, when prompted, doesn't input a positive integer between 1 and 8, inclusive, the program should re-prompt the user until they cooperate:
+If the user, when prompted, doesn't input a positive integer between 1 and 14, inclusive, the program should re-prompt the user until they cooperate:
 
 ```
 $ ./mario
@@ -81,20 +81,16 @@ Height: 4
 
 How to begin? Let's approach this problem one step at a time.
 
-{% video https://www.youtube.com/watch?v=NAs4FIWkJ4s %}
-
-{% next %}
-
 ## Pseudocode
 
-First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Recall how we wrote pseudocode for [finding Mike Smith](https://docs.google.com/presentation/d/17wRd8ksO6QkUq906SUgm17AqcI-Jan42jkY-EmufxnE/edit?usp=sharing). Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
+First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice.  Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
 
 {% spoiler %}
 
 There's more than one way to do this, so here's just one!
 
 1. Prompt user for height
-1. If height is less than 1 or greater than 8 (or not an integer at all), go back one step
+1. If height is less than 1 or greater than 14 (or not an integer at all), go back one step
 1. Iterate from 1 through height:
     1. On iteration *i*, print *i* hashes and then a newline
 
@@ -153,8 +149,8 @@ Modify `mario.c` at right such that it no longer simply prints the user's input 
 
 {% spoiler "Hints" %}
 
-* Keep in mind that a hash is just a character like any other, so you can print it with `printf`.
-* Just as Scratch has a [Repeat](https://docs.google.com/presentation/d/17wRd8ksO6QkUq906SUgm17AqcI-Jan42jkY-EmufxnE/edit?usp=sharing) block, so does C have a [`for`](https://docs.google.com/presentation/d/191XW0DHWlW6WmAhYuFUYnZKUlDx0N4u4Fp81AeW-uNs/edit?usp=sharing) loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
+* Keep in mind that a @ is just a character like any other, so you can print it with `printf`.
+* Just as Scratch has a [Repeat](https://docs.google.com/presentation/d/17wRd8ksO6QkUq906SUgm17AqcI-Jan42jkY-EmufxnE/edit?usp=sharing) block, so does C have a [`for`](https://docs.google.com/presentation/d/191XW0DHWlW6WmAhYuFUYnZKUlDx0N4u4Fp81AeW-uNs/edit?usp=sharing) loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many @ symbols?
 * You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print!
 
     ```
@@ -174,7 +170,7 @@ Modify `mario.c` at right such that it no longer simply prints the user's input 
 
 ## Right-Aligning with Dots
 
-Let's now right-align that pyramid by pushing its hashes to the right by prefixing them with dots (i.e., periods), a la the below.
+Let's now right-align that pyramid by pushing its @ symbols to the right by prefixing them with dots (i.e., periods), a la the below.
 
 ```
 .......@
@@ -191,7 +187,7 @@ Modify `mario.c` in such a way that it does exactly that!
 
 {% spoiler "Hint" %}
 
-Notice how the number of dots needed on each line is the "opposite" of the number of that line's hashes. For a pyramid of height 8, like the above, the first line has but 1 hash and thus 7 dots. The bottom line, meanwhile, has 8 hashes and thus 0 dots. Via what formula (or arithmetic, really) could you print that many dots?
+Notice how the number of dots needed on each line is the "opposite" of the number of that line's @ symbols. For a pyramid of height 8, like the above, the first line has but 1 @'s and thus 7 dots. The bottom line, meanwhile, has 8 @'s and thus 0 dots. Via what formula (or arithmetic, really) could you print that many dots?
 
 {% endspoiler %}
 
@@ -239,5 +235,5 @@ A space is just a press of your space bar, just as a period is just a press of i
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/problems/2019/fall/mario/less
+submit50 csbaxter/problems/2021/x/mario/less
 ```
