@@ -54,17 +54,11 @@ If you look further down in the file, though, you’ll notice that the `vote` an
 
 Complete the implementation of `plurality.c` in such a way that the program simulates a plurality vote election.
 
-- 
-
-  Complete the
-
-   
+-  Complete the
 
   ```plaintext
   vote
   ```
-
-   
 
   function.
 
@@ -73,17 +67,11 @@ Complete the implementation of `plurality.c` in such a way that the program simu
   - If `name` does not match the name of any of the candidates in the election, no vote totals should change, and the `vote` function should return `false` to indicate an invalid ballot.
   - You may assume that no two candidates will have the same name.
 
-- 
-
-  Complete the
-
-   
+- Complete the
 
   ```plaintext
   print_winner
   ```
-
-   
 
   function.
 
